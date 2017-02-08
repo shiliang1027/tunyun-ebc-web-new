@@ -1,0 +1,163 @@
+
+//checkbox style small
+@checkbox-width-small: 17px;
+@checkbox-height-small: 17px;
+@checkbox-label-top-small: 3px;
+@checkbox-label-left-small: 4px;
+@checkbox-label-width-small: 11px;
+@checkbox-label-height-small: 7px;
+//checkbox style large
+@checkbox-width-large: 30px;
+@checkbox-height-large: 30px;
+@checkbox-label-top-large: 6px;
+@checkbox-label-left-large: 5px;
+@checkbox-label-width-large: 20px;
+@checkbox-label-height-large: 12px;
+
+.check-box {
+  float: left;
+  width: @checkbox-width-small;
+  height: @checkbox-height-small;
+  overflow: hidden;
+  position: relative;
+  input[type=checkbox] {
+    //visibility: hidden;
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    width: (@checkbox-width-small - 1);
+    height: (@checkbox-height-small - 1);
+    background: #FFF;
+    border: 1px solid #ddd;
+  }
+
+  label:after {
+    display: none;
+    opacity: 1;
+    content: '';
+    position: absolute;
+    width: @checkbox-label-width-small;
+    height: @checkbox-label-height-small;
+    background: transparent;
+    top: @checkbox-label-top-small;
+    left: @checkbox-label-left-small;
+    border: 3px solid #3dbe1d;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  input[type=checkbox]:checked + label:after {
+    display: inherit;
+  }
+}
+
+.small {
+  width: @checkbox-width-small;
+  height: @checkbox-height-small;
+  label {
+    width: (@checkbox-width-small - 1);
+    height: (@checkbox-height-small - 1);
+  }
+  label:after {
+    width: @checkbox-label-width-small;
+    height: @checkbox-label-height-small;
+    top: @checkbox-label-top-small;
+    left: @checkbox-label-left-small;
+  }
+}
+
+.large {
+  width: @checkbox-width-large;
+  height: @checkbox-height-large;
+  label {
+    width: (@checkbox-width-large - 1);
+    height: (@checkbox-height-large - 1);
+  }
+  label:after {
+    width: @checkbox-label-width-large;
+    height: @checkbox-label-height-large;
+    top: @checkbox-label-top-large;
+    left: @checkbox-label-left-large;
+  }
+}
+// 已审核属性样式
+.approved {
+  margin-bottom: 15px;
+  border: 1px solid #dee5e0;
+}
+
+//属性外间距调整
+.attr-btn {
+  padding-bottom: 10px;
+  button {
+    margin-top: 10px;
+  }
+  //属性序号字体
+  .btn-font {
+    color: #BBBBBB;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .btn{
+    padding: 0px 6px;
+  }
+}
+
+.not-approved {
+  border: 1px dashed rgba(34, 73, 46, 0.33);
+  .attr-detail {
+    //display: none;
+    background-color: transparent;
+    padding-top: 10px;
+    .attr-detail-label {
+      font-size: 13px;
+      color: #b5bba6;
+      span {
+        display: block;
+        float: left;
+        margin: 0px 10px 10px 0px;
+      }
+    }
+  }
+  .hehalf-name > li {
+    cursor: default;
+    padding: 5px 0px 5px 10px;
+  }
+  .hehalf-name > li:hover {
+    background-color: rgb(240, 240, 240);
+  }
+}
+
+.bottom-menu {
+  font-size: 12px;
+  span {
+    display: block;
+    float: right;
+    margin-top: 15px;
+  }
+  .btn-number button {
+    font-size: 10px;
+    margin-right: 5px;
+  }
+}
+
+#lenovo-input-attr-group {
+  .hehalf-name{
+    max-height: 500px;
+    overflow:auto;
+  }
+  .hehalf-name > li {
+    cursor: default;
+    padding: 5px 0px 5px 10px;
+  }
+  .hehalf-name > li:hover {
+    background-color: rgb(240, 240, 240);
+  }
+}

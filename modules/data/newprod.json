@@ -1,0 +1,901 @@
+{"programmes": {
+    "code": "1",
+    "detail": "查询成功",
+    "value": {
+        "total": 11,
+        "pages": 2,
+        "list": [
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 3,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 3,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000005",
+                                "name": "M",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 3,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000015",
+                                "name": "通勤",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 3,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 3,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 3,
+                "prog_name": "",
+                "prog_score": 21.682347,
+                "stat_time": 1480780800
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 8,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 8,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000005",
+                                "name": "M",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 8,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000015",
+                                "name": "通勤",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 8,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 8,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 8,
+                "prog_name": "",
+                "prog_score": 21.557806,
+                "stat_time": 1481558400
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 5,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 5,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000002",
+                                "name": "S",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 5,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000015",
+                                "name": "通勤",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 5,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 5,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 5,
+                "prog_name": "",
+                "prog_score": 21.16894,
+                "stat_time": 1480780800
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 10,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 10,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000004",
+                                "name": "L",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 10,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000015",
+                                "name": "通勤",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 10,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 10,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 10,
+                "prog_name": "",
+                "prog_score": 21.047644,
+                "stat_time": 1481558400
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 4,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 4,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000005",
+                                "name": "M",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 4,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000022",
+                                "name": "韩版",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 4,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 4,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 4,
+                "prog_name": "",
+                "prog_score": 20.289322,
+                "stat_time": 1480780800
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 1,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 1,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000002",
+                                "name": "S",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 1,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000022",
+                                "name": "韩版",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 1,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 1,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 1,
+                "prog_name": "",
+                "prog_score": 19.775915,
+                "stat_time": 1480780800
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 2,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 2,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000005",
+                                "name": "M",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 2,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000038",
+                                "name": "气质",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 2,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 2,
+                        "stat_time": 1480780800,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 2,
+                "prog_name": "",
+                "prog_score": 19.728636,
+                "stat_time": 1480780800
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 9,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 9,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000005",
+                                "name": "M",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 9,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000015",
+                                "name": "通勤",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 9,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 9,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000004",
+                                "name": "其它",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 9,
+                "prog_name": "",
+                "prog_score": 19.724439,
+                "stat_time": 1481558400
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 6,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 6,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000004",
+                                "name": "L",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 6,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000022",
+                                "name": "韩版",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 6,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 6,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000003",
+                                "name": "修身型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 6,
+                "prog_name": "",
+                "prog_score": 19.718718,
+                "stat_time": 1481558400
+            },
+            {
+                "attrs": [
+                    {
+                        "p_id": 2,
+                        "p_name": "颜色",
+                        "prog_id": 7,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "2000003",
+                                "name": "黑",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 110,
+                        "p_name": "尺码",
+                        "prog_id": 7,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "110000005",
+                                "name": "M",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 117,
+                        "p_name": "风格",
+                        "prog_id": 7,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "117000015",
+                                "name": "通勤",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 119,
+                        "p_name": "流行元素/工艺",
+                        "prog_id": 7,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "119000885",
+                                "name": "连衣裙",
+                                "uid": ""
+                            }
+                        ]
+                    },
+                    {
+                        "p_id": 124,
+                        "p_name": "版型",
+                        "prog_id": 7,
+                        "stat_time": 1481558400,
+                        "v_id": 0,
+                        "v_name": "",
+                        "valias": [
+                            {
+                                "details": [],
+                                "id": "124000006",
+                                "name": "宽松型",
+                                "uid": ""
+                            }
+                        ]
+                    }
+                ],
+                "prog_id": 7,
+                "prog_name": "",
+                "prog_score": 19.300465,
+                "stat_time": 1481558400
+            }
+        ]
+    }
+},
+    "programmeAttrs":{"code":"1","detail":"查询成功","value":{"total":5,"pages":1,"list":[{"v_id":124000003,"p_name":"版型","stat_time":1482163200,"prog_id":13,"p_id":124,"v_name":"修身型","cid":50200000},{"v_id":2000003,"p_name":"颜色","stat_time":1482163200,"prog_id":13,"p_id":2,"v_name":"黑","cid":50200000},{"v_id":1011322,"p_name":"品牌","stat_time":1482163200,"prog_id":13,"p_id":1,"v_name":"长袖","cid":50200000},{"v_id":110000005,"p_name":"尺码","stat_time":1482163200,"prog_id":13,"p_id":110,"v_name":"M","cid":50200000},{"v_id":101000007,"p_name":"图案","stat_time":1482163200,"prog_id":13,"p_id":101,"v_name":"纯色","cid":50200000}]}},
+    "trConfigTypes":[{"type_id":1,"p_name":"裙型","v_name":"背带裙","p_id":"102","v_id":"102000012"},
+        {"type_id":2,"p_name":"裙型","v_name":"伞裙","p_id":"102","v_id":"102000013"},
+        {"type_id":3,"p_name":"裙型","v_name":"西装裙","p_id":"102","v_id":"102000014"},
+        {"type_id":4,"p_name":"裙型","v_name":"牛仔裙","p_id":"102","v_id":"102000015"},
+        {"type_id":2,"p_name":"裙型","v_name":"伞裙","p_id":"102","v_id":"102000013"},
+        {"type_id":3,"p_name":"裙型","v_name":"西装裙","p_id":"102","v_id":"102000014"},
+        {"type_id":2,"p_name":"裙型","v_name":"伞裙","p_id":"102","v_id":"102000013"},
+        {"type_id":3,"p_name":"裙型","v_name":"西装裙","p_id":"102","v_id":"102000014"}],
+    "timeList":[{"stat_time":1482163200},{"stat_time":1481644800},{"stat_time":1481558400}]
+}

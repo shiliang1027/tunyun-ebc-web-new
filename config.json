@@ -1,0 +1,5 @@
+{
+  "web-port": 2333,
+  "thrift-ip": "127.0.0.1",
+  "thrift-port": 8999
+}

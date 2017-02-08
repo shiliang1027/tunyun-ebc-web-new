@@ -1,0 +1,60 @@
+<style>
+    .label-emphasis {
+        display: block;
+        float: left;
+        margin-bottom: 3px;
+        margin-right: 5px;
+    }
+
+</style>
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+        <form class="navbar-form navbar-right">
+            <div class="input-group" style="">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in categs">
+                            <a href="javascript:void(0)" ng-click="categChange(x)"
+                               ng-bind="x.cat_name" ng-style="x.style"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <input type="text" class="form-control" placeholder="请输入产品ID" ng-model="prodid">
+                <span class="input-group-addon" style="cursor: pointer" ng-click="search()">查 询</span>
+            </div>
+            <!-- /input-group -->
+        </form>
+    </div>
+</div>
+<div>
+    <div uib-alert ng-repeat="alert in alerts" ng-class="'text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title">基本信息</h3></div>
+        <div class="panel-body">
+            <span class="label label-primary label-emphasis"
+                  style="font-size:14px;" ng-repeat="(k,v) in product.cf1">{{k}}:{{v}}</span>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title">属性原始值</h3></div>
+        <div class="panel-body">
+            <span class="label label-info label-emphasis" style="font-size:14px;" ng-repeat="(k,v) in product.cf2">{{k}}:{{v}}</span>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title">商品</h3></div>
+        <div class="panel-body">
+            <a ng-href="/bgmanager#goods/{{v.split('#')[0]}}/{{v.split('#')[1]}}" target="_blank" ng-repeat="(k,v) in product.cf3"><span class="label label-default label-emphasis" style="font-size:14px;" >{{k}}:{{v}}</span></a>
+        </div>
+    </div>
+</div>

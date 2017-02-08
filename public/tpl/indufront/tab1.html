@@ -1,0 +1,73 @@
+
+<search1 btntitle="搜一下" action="search(item)" style="position: absolute;right: 0px;top:0px;" absoluteTop="0px" absoluteTop="0px" absoluteRight="0px" fixedTop="0px" fixedRight="36px"></search1>
+
+<div class="col-md-8" style="padding: 0;">
+    <div class="container-fluid">
+        <div class="row borderbottom1" style="" ng-repeat="x in currentTab.data.article_summary">
+            <div class="text">
+                <p><span class="text1"><a href="#/main/indufront/detail/{{x.uid}}"
+                        ng-bind="x.title"></a></span></p>
+            </div>
+            <div class="col-md-9" style="padding: 0 0 20px 0;">
+                <div class="text">
+                    <p class="text2">
+                        <span>来源：{{x.info_seed_str}}</span><span>&nbsp; &nbsp;&nbsp; </span><span>&nbsp;</span><span>&nbsp;</span><span>{{x.collect_time_str}}</span><span>&nbsp; </span>
+                    </p>
+                </div>
+                <div class="text">
+                    <p class="text3"><span>【文章摘要】</span><span>{{x.summary}}</span><span>...</span>
+                    </p>
+                </div>
+                <div class="text">
+                    <p class="text2">
+                        <span>阅读</span><span>(</span><span>{{x.read_num}}</span><span>)</span><span>&nbsp;&nbsp; </span><span>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span>&nbsp;&nbsp; </span><span>&nbsp;&nbsp; </span><span>标签：{{x.label}}/</span><span>&nbsp; </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text">
+                    <img class="img" style="" ng-src="x.img_arr[0]">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <panel2 title="流行标签云">
+        <jqcloud words="currentTab.lablecloud" height="300" auto-resize="true"></jqcloud>
+    </panel2>
+    <panel2 title="国内流行趋势">
+        <div class="container-fluid">
+            <div class="row borderbottom2" ng-repeat="x in currentTab.data.inland_fashion_trend">
+                <vane item="x"></vane>
+            </div>
+        </div>
+    </panel2>
+    <panel2 title="国外流行趋势">
+        <div class="container-fluid">
+            <div class="row borderbottom2" ng-repeat="x in currentTab.data.foreign_fashion_trend">
+                <vane item="x"></vane>
+            </div>
+
+        </div>
+    </panel2>
+    <panel2 title="热门品牌动态">
+        <ul class="ul4_class">
+            <li ng-repeat="x in currentTab.data.brand_hot_dynamic">
+                <div class="ul4_img">
+                    <img ng-src="{{x.icon}}">
+                </div>
+                <div class="ul4_title">
+                    <span class="ul4_title_name">{{x.titleName}}</span>
+                    <span class="ul4_title_num">相关资讯({{x.title_num}})</span>
+                </div>
+                <div class="ul4_summary">
+            <span class="ul4_summary_msg">最新消息：<a
+                    href="#/main/indufront/detail/{{x.uid}}"
+                    target="_blank">{{x.summary}}</a></span>
+                </div>
+            </li>
+        </ul>
+    </panel2>
+</div>

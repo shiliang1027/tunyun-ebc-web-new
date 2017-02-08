@@ -1,0 +1,6 @@
+<div class="datasolt_backdrop"
+     style="font-weight: bold; background-color: #F7F7F6;width: 100%;" ng-style="{'color': $index==0?'#FFFFFF':''}" ng-repeat="item in items|orderBy:order:type">
+    <div class="datasolt_frontdrop"
+         style="" ng-style="{'width':(item.sales_volume/maxValue*100)+'%','background-color':$index==0?colors[0]:colors[1]}"></div>
+    <label class="datasolt_name" style="width: 150px; ">{{item.model}}/{{item.brand}}/{{parseInt(item.sales_volume/maxValue*100)}}</label><label
+        class="datasolt_value" style="width: 150px;"><a href="#">{{item.sales_volume}}</a></label></div>

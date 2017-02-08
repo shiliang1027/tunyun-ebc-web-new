@@ -1,0 +1,45 @@
+<div class="graphs" ng-init="init()">
+    <div class="xs">
+        <div class="col-md-8">
+            <div class="indufrontdetail">
+                <div>
+                    <p class="title_p">{{data.DynmaicDetail.title}}</p>
+
+                    <div class="indu_info_detail_summary">
+                        <span class="indu_info_detail_summary_source_time">来源：{{data.DynmaicDetail.info_seed_str}}</span>
+                        <span class="indu_info_detail_summary_source_time">{{data.DynmaicDetail.collect_time_str}}</span>
+                        <span>阅读（{{data.DynmaicDetail.read_num}}）</span>
+                        <span class="indu_info_detail_summary_class_favorite" style="cursor: pointer">【点击收藏】</span>
+                        <span class="indu_info_detail_summary_class_favorite">分类：{{data.DynmaicDetail.info_dime_str}}</span>
+                    </div>
+                </div>
+                <div style="font-size:14px;color: #2b2b2b;" ng-bind-html="data.DynmaicDetail.orig_cont">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <panel2 title="你看过的动态">
+                <div class="container-fluid">
+                    <div class="row borderbottom2" ng-repeat="x in data.HaveReadDynamic">
+                        <vane item="x"></vane>
+                    </div>
+                </div>
+            </panel2>
+            <panel2 title="同主题相关动态">
+                <div class="container-fluid">
+                    <div class="row borderbottom2" ng-repeat="x in data.SameThemeDynamic">
+                        <vane item="x"></vane>
+                    </div>
+                </div>
+            </panel2>
+            <panel2 title="猜你喜欢动态">
+                <div class="container-fluid">
+                    <div class="row borderbottom2" ng-repeat="x in data.GuessLikeDynamic">
+                        <vane item="x"></vane>
+                    </div>
+                </div>
+            </panel2>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

@@ -1,0 +1,280 @@
+<div class="graphs" ng-init="refresh()">
+<div class="xs">
+<div class="col-md-8 email-list1">
+    <panel1 title="产业流行动态">
+        <div style="margin: 10px auto;">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <div class="container-fluid" style="padding: 0">
+                        <div class="row" style="margin: 0">
+                            <div class="col-md-4" style="padding: 0 5px;" ng-repeat="item in slide.items"><img ng-src="{{item.itemSrc}}" style="width: 100%">
+                                <div class="text" style="margin: 10px 0;">
+                                    <p class="text1" style="font-size: 15px;font-weight: 700;color: #333333;"><span ng-bind="item.itemTitle"></span></p>
+                                </div>
+                                <div class="text">
+                                    <p class="text2" style="font-size: 14px;color: #666666"><span ng-bind="item.itemSummary"></span><span>......</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </panel1>
+    <panel1 title="品牌品类动态">
+        <div class="container-fluid">
+            <div class="row" style="height: 300px;" highchart config="data.BrandDynamic">
+            </div>
+            <div class="row" style="height: 300px;" highchart config="data.CategoryDynamic">
+            </div>
+        </div>
+    </panel1>
+    <panel1 title="渠道分布动态">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8" style="padding: 0;height: 300px;" highchart config="data.ChannelSales">
+                </div>
+                <div class="col-md-4" style="padding: 0;height: 300px;" highchart config="data.ChannelDutyRatio">
+                </div>
+            </div>
+        </div>
+    </panel1>
+    <panel1 title="消费能力动态">
+        <div style="height: 300px;" highchart config="data.ConsumptionPower"></div>
+    </panel1>
+    <panel1 title="企业销售动态">
+        <div class="container-fluid">
+            <div class="row">
+                <span class="span1" style="padding: 0 20px;"
+                      ng-repeat="x in data.EnterpriseSalesIndicator">
+                <div class="indicator_span01"><label ng-bind="x.indicator_name"></label></div>
+                <div class="indicator_span02"><label ng-bind="x.indicator_value"></label></div>
+                <div class="indicator_span03"><label>较前天</label>
+                    <span class="indicator_icon" ng-style="{color:x.indicator_hb_trend=='1'?'#86C400':'#C40000'}"
+                          ng-bind="x.indicator_hb_trend=='1'?'#':'i'"></span>
+                    <label ng-bind="x.indicator_hb"></label>
+                </div>
+            </span>
+            </div>
+            <div class="row">
+                <div class="col-md-8" style="padding: 0;height: 300px;" highchart config="data.enterpriseConsumptionDyna">
+                </div>
+                <div class="col-md-4" style="padding: 0;height: 300px;" highchart config="data.enterpriseConsumptionDutyRatio">
+                </div>
+            </div>
+        </div>
+    </panel1>
+    <panel1 title="企业客流动态">
+        <div class="container-fluid">
+            <div class="row">
+                <span class="span1" style="padding: 0 20px;"
+                      ng-repeat="x in data.EnterpriseSalesIndicator">
+                <div class="indicator_span01"><label ng-bind="x.indicator_name"></label></div>
+                <div class="indicator_span02"><label ng-bind="x.indicator_value"></label></div>
+                <div class="indicator_span03"><label>较前天</label>
+                    <span class="indicator_icon" ng-style="{color:x.indicator_hb_trend=='1'?'#86C400':'#C40000'}"
+                          ng-bind="x.indicator_hb_trend=='1'?'#':'i'"></span>
+                    <label ng-bind="x.indicator_hb"></label>
+                </div>
+            </span>
+            </div>
+            <div class="row" style="height: 300px;" highchart config="data.enterprisePassengerFlow">
+            </div>
+        </div>
+
+    </panel1>
+</div>
+<div class="col-md-4 inbox_right">
+<panel1  title="流行标签云">
+    <jqcloud words="data.PopLable" height="300" auto-resize="true"></jqcloud>
+</panel1>
+<panel1 title="好评标签词">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4" style="padding: 0 2px;" ng-repeat="item in data.PraiseLables">
+                <label class="label_1 label_color_1">{{item.label}}({{item.number}})</label>
+            </div>
+        </div>
+    </div>
+</panel1>
+<panel1 title="差评标签词">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4" style="padding: 0 2px;" ng-repeat="item in data.BadLables">
+                <label class="label_1 label_color_2">{{item.label}}({{item.number}})</label>
+            </div>
+        </div>
+    </div>
+</panel1>
+<panel1 title="商品热销榜">
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 5px;">
+            <datasolt items="data.CommodityHot" order="['sales_volume']" type="'desc'" colors="['#6FC629','#00BDF2']"></datasolt>
+        </div>
+    </div>
+</panel1>
+<panel1 title="商品滞销榜">
+
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 5px;">
+            <datasolt items="data.CommodityUnsalable" order="['sales_volume']" type="'desc'" colors="['#DE0000','#FF9B6C']"></datasolt>
+        </div>
+    </div>
+</panel1>
+<panel1 title="关注的品牌">
+    <div  class="container-fluid">
+        <div class="row" style="border-bottom: 1px dashed #9cc2cb;padding: 5px 0;" ng-repeat="item in data.AttentionBrand">
+            <div class="col-md-3" style="padding: 0;text-align: center;">
+                <img ng-src="{{item.brand_icon}}">
+            </div>
+            <div class="col-md-9" style="padding: 0;">
+                <div class="container-fluid">
+                    <div class="row" style="color: #666666;font-size: 14px;">
+                        <span>成交金额(万元) : </span><span class="brand_amount_span" ng-bind="item.brand_amount"></span>
+                        <img ng-src="{{item.brand_amount_trend=='-1'?'images/comp/list/u296.png':'images/comp/list/u292.png'}}">
+                    </div>
+                    <div class="row" style="color: #B7B7B7;font-size: 12px;  margin-top: 10px;">
+                        <div class="col-md-4">
+                            <div class="container-fluid"  style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-md-3" style="padding: 0;">
+                                        <img class="brand_attention_img" src="images/comp/list/u580.png">
+                                    </div>
+                                    <div class="col-md-9" style="padding: 0;">
+                                        <span class="brand_attention_span" ng-bind="item.brand_attention"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-md-3" style="padding: 0;">
+                                        <img class="brand_attention_img" src="images/comp/list/u424.png">
+                                    </div>
+                                    <div class="col-md-9"  style="padding: 0;">
+                                        <span class="brand_attention_span" ng-bind="item.brand_good_reputation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="container-fluid" style="padding: 0;">
+                                <div class="row">
+                                    <div class="col-md-3" style="padding: 0;">
+                                        <img class="brand_attention_img" src="images/comp/list/u422.png">
+                                    </div>
+                                    <div class="col-md-9" style="padding: 0;">
+                                        <span class="brand_attention_span" ng-bind="item.brand_bad_reputation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</panel1>
+<panel1 title="关注的店铺">
+    <div  class="container-fluid">
+        <div class="row" ng-repeat="item in data.AttentionShop" style="border-bottom: 1px dashed #9cc2cb;padding: 5px 0;">
+            <div  class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="store_name_span" ng-bind="item.store_name"></span>
+                    </div>
+                </div>
+                <div class="row" style="  color: #B7B7B7;font-size: 12px;margin-top: 10px;">
+                    <div class="col-md-6">
+                        <img class="brand_attention_img" src="images/comp/list/u703.png">
+                        <span class="brand_attention_span" ng-bind="item.store_sales_volume" style="margin: 0 5px;"></span>
+                        <img class="store_attention_trend_img" style="margin-top: 4px;" ng-src="images/comp/list/{{item.store_sales_trend=='1'?'u292.png':'u296.png'}}">
+                    </div>
+                    <div class="col-md-6"  style="padding: 0;">
+                        <div  class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="container-fluid"  style="padding: 0;">
+                                        <div class="row">
+                                            <div class="col-md-3" style="padding: 0;">
+                                                <img class="brand_attention_img" src="images/comp/list/u580.png">
+                                            </div>
+                                            <div class="col-md-9" style="padding: 0;">
+                                                <span class="brand_attention_span" ng-bind="item.store_attention"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="container-fluid" style="padding: 0;">
+                                        <div class="row">
+                                            <div class="col-md-3" style="padding: 0;">
+                                                <img class="brand_attention_img" src="images/comp/list/u424.png">
+                                            </div>
+                                            <div class="col-md-9"  style="padding: 0;">
+                                                <span class="brand_attention_span" ng-bind="item.store_good_reputation"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</panel1>
+
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<style type="text/css">
+    .carousel-indicators {
+        bottom: -20px;
+    }
+
+    .carousel-indicators li {
+        border: 1px solid #ccc;
+    }
+
+    .carousel-indicators .active {
+        background-color: #0000ff;
+    }
+
+    .carousel-control.left, .carousel-control.right {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .col-md-4, .col-md-8 {
+        /*padding: 0px;*/
+    }
+    .brand_amount {
+        color: #666666;
+        font-size: 14px;
+    }
+   .brand_amount_span {
+        font-weight: bold;
+    }
+    .brand_attention {
+        color: #B7B7B7;
+        font-size: 12px;
+    }
+    .brand_attention_span {
+        display: block;
+        float: left;
+        /*margin-right: 25px;*/
+    }
+    .brand_attention_img{
+        float: left;
+    }
+    .store_attention_trend_img{
+        float: left;
+    }
+    .store_name_span{
+        color: #666666;
+        font-size: 13px;
+    }
+</style>

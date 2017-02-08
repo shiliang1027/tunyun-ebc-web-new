@@ -1,0 +1,153 @@
+
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+
+        <form class="navbar-form" role="form" style="text-align: right;">
+            <div class="input-group">
+                <input type="text" style="width: 100px;" class="form-control" uib-datepicker-popup ng-model="time" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+            <div class="input-group" style="">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in categs">
+                            <a href="javascript:void(0)" ng-click="categChange(x)"
+                               ng-bind="x.cat_name" ng-style="x.style"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentAttr.pname||'选择属性'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in attrs"><a href="javascript:void(0)" ng-bind="x.pname"  ng-click="attrChange(x)"></a></li>
+                    </ul>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown" style="min-width:100px; ">
+                        <span ng-bind="currentChan.chaname||'选择渠道'"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="x in chans"><a href="javascript:void(0)" ng-click="changeChan(x)"
+                                                      ng-bind="x.chaname"></a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <span class="input-group-addon" style="cursor: pointer;" ng-click="search()">查 询</span>
+            </div>
+            <!-- /input-group -->
+        </form>
+    </div>
+</div>
+
+<div>
+    <div uib-alert ng-repeat="alert in alerts"
+         ng-class="'navbar-fixed-top text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">
+        {{alert.msg}}
+    </div>
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-xs-6 col-md-5 column"  style="padding-left: 5px;padding-right: 5px;">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th nowrap="nowrap">序号</th>
+                        <th nowrap="nowrap">属性值</th>
+                        <th nowrap="nowrap">引用次数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="x in datas">
+                        <td ng-bind="$index+1"></td>
+                        <td ng-bind-html="x.p_value | trustHtml"  style="word-break:break-all"></td>
+                        <td ng-bind="x.count"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: right;">
+                            <ul style="margin: 8px 0;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="total" ng-model="pageNo" items-per-page="pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="pageChanged()"></ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-6 col-md-3 column"  style="">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th nowrap="nowrap">正则表达式</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="row" style="margin-bottom: 5px;" ng-repeat="xx in preRules" >
+                                <div class="col-md-6" style="padding-right: 0px;padding-left: 0px;">
+                                    <input type="text" class="form-control" ng-model="xx.expr" ng-value="xx.expr" data-ng-trim="false">
+                                </div>
+                                <div class="col-md-4" style="padding-right: 0px;padding-left: 0px;">
+                                    <input type="text" class="form-control" ng-model="xx.replace_str" ng-value="xx.replace_str" data-ng-trim="false">
+                                </div>
+                                <div class="col-md-1" style="padding-right: 0px;padding-left: 0px;">
+                                    <button ng-show="$index==0" type="button" class="btn btn-default" ng-click="add(preRules,1)">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </button>
+                                    <button ng-show="$index>0" type="button" class="btn btn-default" ng-click="del(preRules,xx)">
+                                        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-xs-6 col-md-4 column"  style="padding-left: 5px;padding-right: 5px;">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th nowrap="nowrap">序号</th>
+                        <th nowrap="nowrap">属性值</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="x in datas">
+                        <td ng-bind="$index+1"></td>
+                        <td ng-bind="x.p_value | myformat:preRules"  style="word-break:break-all"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: right;">
+                            <ul style="margin: 8px 0;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="total" ng-model="pageNo" items-per-page="pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="pageChanged()"></ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container-fluid" style="margin-bottom: 100px;">
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row" style="text-align: right;padding-right:10px;">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default navbar-btn" ng-click="create()">生成数据</button>
+            </div>
+        </div>
+    </div>
+</div>

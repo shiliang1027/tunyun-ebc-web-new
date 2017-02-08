@@ -1,0 +1,90 @@
+{
+  "UserInfo": {
+    "user_id": 100001,
+    "user_name": "administrator"
+  },
+  "InduInfo": {
+    "indu_id": 2,
+    "indu_name": "连衣裙"
+  },
+  "Navigation": [
+    {
+      "itemId": 1001,
+      "itemIcon": "images/comp/tunyun.navigator/img-home_u36.png",
+      "itemFocusIcon": "images/comp/tunyun.navigator/img-home_u36_seled.png",
+      "itemTitle": "首页"
+    },
+    {
+      "itemId": 1002,
+      "itemIcon": "images/comp/tunyun.navigator/img-cyqy_u38.png",
+      "itemFocusIcon": "images/comp/tunyun.navigator/img-cyqy_u38_seled.png",
+      "itemTitle": "产业前沿"
+    },
+    {
+      "itemId": 1003,
+      "itemIcon": "images/comp/tunyun.navigator/img-hyfx_u40.png",
+      "itemFocusIcon": "images/comp/tunyun.navigator/img-hyfx_u40_seled.png",
+      "itemTitle": "行业分析"
+    },
+    {
+      "itemId": 1004,
+      "itemIcon": "images/comp/tunyun.navigator/img-xsfx_u42.png",
+      "itemFocusIcon": "",
+      "itemTitle": "销售分析"
+    },
+    {
+      "itemId": 1005,
+      "itemIcon": "images/comp/tunyun.navigator/img-jzfx_u44.png",
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-jzfx_u44_seled.png",
+      "itemTitle": "竞争分析"
+    },
+    {
+      "itemId": 1006,
+      "itemIcon": "images/comp/tunyun.navigator/img-khfx_u46.png",
+      "itemFocusIcon": "images/comp/tunyun.navigator/img-khfx_u46_seled.png",
+      "itemTitle": "客户分析"
+    },
+    {
+      "itemId": 1007,
+      "itemIcon": "images/comp/tunyun.navigator/img-znyx_u48.png",
+      "itemFocusIcon": "",
+      "itemTitle": "智能营销"
+    },
+    {
+      "itemId": 1008,
+      "itemIcon": "images/comp/tunyun.navigator/img-cmfx_u66.png",
+      "itemFocusIcon": "",
+      "itemTitle": "采买分析"
+    },
+    {
+      "itemId": 1009,
+      "itemIcon": "images/comp/tunyun.navigator/img-kcfx_u68.png",
+      "itemFocusIcon": "",
+      "itemTitle": "库存分析"
+    },
+    {
+      "itemId": 1010,
+      "itemIcon": "images/comp/tunyun.navigator/img-xpyf_u70.png",
+      "itemFocusIcon": "",
+      "itemTitle": "新品研发"
+    },
+    {
+      "itemId": 1011,
+      "itemIcon": "images/comp/tunyun.navigator/img-scxfx_u72.png",
+      "itemFocusIcon": "",
+      "itemTitle": "生产线分析"
+    },
+    {
+      "itemId": 1012,
+      "itemIcon": "images/comp/tunyun.navigator/img-zxerp_u74.png",
+      "itemFocusIcon": "",
+      "itemTitle": "在线ERP"
+    },
+    {
+      "itemId": 1013,
+      "itemIcon": "images/comp/tunyun.navigator/img-zsdz_u76.png",
+      "itemFocusIcon": "",
+      "itemTitle": "专属定制"
+    }
+  ]
+}

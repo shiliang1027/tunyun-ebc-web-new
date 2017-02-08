@@ -1,0 +1,12 @@
+<ul class="">
+    <li ng-repeat="x in items">
+        <span class="span_style1" ng-bind="x.ebName"></span>
+        <span class="span_style2" ng-bind="type==1?x.saleroom:x.evaluateNum"></span>
+        <span class="span_style3">
+            <span class="span_style1_span" ng-bind="x.goodsEv"></span>
+            <span class="span_style2_span" ng-bind="x.neutralEv"></span>
+            <span class="span_style3_span" ng-bind="x.badEv"></span>
+        </span>
+        <span ng-if="type==1" class="span_style4" ng-bind="x.evaluateNum"></span>
+    </li>
+</ul>

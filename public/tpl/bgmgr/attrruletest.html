@@ -1,0 +1,72 @@
+
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+
+        <form class="navbar-form" role="form" style="text-align: right;">
+            <div class="input-group" style="">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in categs">
+                            <a href="javascript:void(0)" ng-click="categChange(x)"
+                               ng-bind="x.cat_name" ng-style="x.style"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown" style="min-width:100px; ">
+                        <span ng-bind="currentChan.chaname||'选择渠道'"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="x in chans"><a href="javascript:void(0)" ng-click="changeChan(x)"
+                                                      ng-bind="x.chaname"></a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入属性值" ng-model="p_value">
+                <!-- /btn-group -->
+                <span class="input-group-addon" style="cursor: pointer" ng-click="pageNo=1;search()">查 询</span>
+            </div>
+            <!-- /input-group -->
+        </form>
+    </div>
+</div>
+
+<div>
+    <div uib-alert ng-repeat="alert in alerts"
+         ng-class="'navbar-fixed-top text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">
+        {{alert.msg}}
+    </div>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>p_name</th>
+            <th>p_value</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in datas">
+            <td ng-bind="x.p_name" style="width: 20%;"  ng-click="x.show=x.show?false:true"></td>
+            <td ng-bind="x.p_value" style="width: 20%;word-break:break-all" ng-click="x.show=x.show?false:true"></td>
+            <td style="word-break:break-all">
+                <div class="container-fluid" ng-show="x.show">
+                    <div class="row" ng-repeat="xx in x.originals" ng-bind="xx.original"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right;">
+                <ul previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="total" ng-model="pageNo" items-per-page="pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="pageChanged()"></ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

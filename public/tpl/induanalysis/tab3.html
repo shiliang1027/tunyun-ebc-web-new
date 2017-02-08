@@ -1,0 +1,139 @@
+<dropdown1 title="当前渠道" items="chans" key="chanid" value="chaname" btntitle="选渠道" seleted-item="currentChan" action="chanChange(item)"  style="width:210px;height: 38px;" absoluteTop="0px" absoluteTop="0px" absoluteRight="0px" fixedTop="0px" fixedRight="36px"></dropdown1>
+
+
+<div class="container-fluid">
+    <div class="row box-shadow" style="height: 460px;">
+        <div class="col-md-12" style="height: 120px; overflow: hidden; margin-top: 20px;">
+            <div>
+                <span class="span1" ng-style="{'border-right':$index==2?'1px solid #eeeeee':''}"
+                      ng-repeat="x in currentTab.data.ChanAnyIndicator">
+                <div class="indicator_span01"><label ng-bind="x.indicator_name"></label></div>
+                <div class="indicator_span02"><label ng-bind="x.indicator_value"></label></div>
+                <div class="indicator_span03"><label>较前天</label>
+                    <span class="indicator_icon" ng-style="{color:x.indicator_hb_trend=='1'?'#86C400':'#C40000'}"
+                          ng-bind="x.indicator_hb_trend=='1'?'#':'i'"></span>
+                    <label ng-bind="x.indicator_hb"></label>
+                </div>
+            </span>
+            </div>
+        </div>
+        <div class="col-md-12" style=" overflow: hidden;height: 300px;" highchart config="currentTab.data.ChanSalesTrend">
+        </div>
+    </div>
+</div>
+
+<div class="col-md-8">
+    <panel1 title="热销品类榜">
+        <table class="table1">
+            <thead>
+            <tr>
+                <td></td>
+                <td>品牌名称</td>
+                <td>30天销售额</td>
+                <td>环比增幅</td>
+                <td>行业占比</td>
+                <td style="width: 345px;text-align: center;">销售额占比</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in currentTab.data.HotCatSalesTop">
+                <td ng-style="$index==0?{'min-width': '20px','text-align': 'center'}:{}" ng-repeat="(k,v) in x"
+                    ng-class="k==3?v[1]=='1'?'indicator_style_1':'indicator_style_2':''">
+                    {{k==3?v[0]:v}}<span ng-if="k==3" class="indicator_style" ng-bind="v[1]=='1'?'#':'i'"></span>
+                </td>
+                <td style="vertical-align: top;" ng-if="$index==0" rowspan="{{currentTab.data.HotCatSalesTop.length}}">
+                        <div highchart style="height: 300px;" config="currentTab.data.HotCatSalesTopRatio"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </panel1>
+    <panel1 title="热销品牌榜">
+        <table class="table1">
+            <thead>
+            <tr>
+                <td></td>
+                <td>品牌名称</td>
+                <td>30天销售额</td>
+                <td>环比增幅</td>
+                <td>行业占比</td>
+                <td style="width: 345px;text-align: center;">销售额占比</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in currentTab.data.HotBrandSalesTop">
+                <td ng-style="$index==0?{'min-width': '20px','text-align': 'center'}:{}" ng-repeat="(k,v) in x"
+                    ng-class="k==3?v[1]=='1'?'indicator_style_1':'indicator_style_2':''">
+                    {{k==3?v[0]:v}}<span ng-if="k==3" class="indicator_style" ng-bind="v[1]=='1'?'#':'i'"></span>
+                </td>
+                <td style="vertical-align: top;" ng-if="$index==0" rowspan="{{currentTab.data.HotBrandSalesTop.length}}">
+                        <div highchart style="height: 300px;" config="currentTab.data.HotBrandSalesTopRatio"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </panel1>
+    <panel1 title="消费能力分布">
+        <table class="table1">
+            <thead>
+            <tr>
+                <td></td>
+                <td>消费区间</td>
+                <td>30天销售额</td>
+                <td>环比增幅</td>
+                <td>行业占比</td>
+                <td style="width: 345px;text-align: center;">销售额占比</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in currentTab.data.ConsumptionPowerTop">
+                <td ng-style="$index==0?{'min-width': '20px','text-align': 'center'}:{}" ng-repeat="(k,v) in x"
+                    ng-class="k==3?v[1]=='1'?'indicator_style_1':'indicator_style_2':''">
+                    {{k==3?v[0]:v}}<span ng-if="k==3" class="indicator_style" ng-bind="v[1]=='1'?'#':'i'"></span>
+                </td>
+                <td style="vertical-align: top;" ng-if="$index==0" rowspan="{{currentTab.data.ConsumptionPowerTop.length}}">
+                        <div highchart style="height: 300px;" config="currentTab.data.ConsumptionPowerTopRatio"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </panel1>
+
+</div>
+<div class="col-md-4">
+    <panel2 title="热销店铺榜">
+        <div class="container-fluid">
+            <div class="row">
+                <evaluate items="currentTab.data.HotShopTop" class="ul6_class" type="1"></evaluate>
+            </div>
+        </div>
+    </panel2>
+    <panel2 title="热销商品榜">
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 5px;">
+                <datasolt items="currentTab.data.HotSales" order="['sales_volume']" type="'desc'" colors="['#6FC629','#00BDF2']"></datasolt>
+            </div>
+        </div>
+    </panel2>
+    <panel2 title="滞销商品榜">
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 5px;">
+                <datasolt items="currentTab.data.Unsalable" order="['sales_volume']" type="'desc'" colors="['#DE0000','#FF9B6C']"></datasolt>
+            </div>
+        </div>
+    </panel2>
+    <panel2 title="用户评价词">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4" style="padding: 0 2px;" ng-repeat="item in currentTab.data.GoodReputation">
+                    <label class="label_1 label_color_1">{{item.label}}({{item.number}})</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" style="padding: 0 2px;" ng-repeat="item in currentTab.data.BadReputation">
+                    <label class="label_1 label_color_2">{{item.label}}({{item.number}})</label>
+                </div>
+            </div>
+        </div>
+    </panel2>
+</div>

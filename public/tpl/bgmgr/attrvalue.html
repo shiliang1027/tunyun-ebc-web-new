@@ -1,0 +1,289 @@
+
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+        <form class="navbar-form" role="form" style="text-align: right;">
+            <div class="form-group">
+                <button type="button" class="btn btn-default" ng-click="download()">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> 下载
+                </button>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                <input type="text" style="width: 100px;" class="form-control" uib-datepicker-popup ng-model="startTime" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group" style="">
+                    <!-- /btn-group -->
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                            <li ng-repeat="x in categs">
+                                <a href="javascript:void(0)" ng-click="categChange(x)"
+                                   ng-bind="x.cat_name" ng-style="x.style"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span ng-bind="currentAttr.pname||'选择属性'"></span> <span class="caret"></span></button>
+                        <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                            <li ng-repeat="x in attrs" ng-click="attrChange(x)"><a href="" ng-bind="x.pname"></a></li>
+                        </ul>
+                    </div>
+                    <span class="input-group-addon" style="cursor: pointer" ng-click="search()">查 询</span>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div uib-alert ng-repeat="alert in alerts" ng-class="'navbar-fixed-top text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="col-xs-6 col-md-4 column"  style="padding-left: 5px;padding-right: 5px;">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">已审核</h3></div>
+                <div class="panel-body">
+                    <!--<div class="row" ng-show="!attrvalues.approvedAttr||(attrvalues.approvedAttr&&attrvalues.approvedAttr.length<=0)">-->
+                        <!--<span style="display: block;text-align: center;">无已审核数据!</span>-->
+                    <!--</div>-->
+
+                    <div class="row">
+                        <form class="navbar-form navbar-left">
+                            <input type="text" class="form-control" placeholder="模糊搜索" ng-model="approvedKeyWord" style="width: 100px;" ng-change="approvedPageNo=1;approvedSearch()">
+                            <input type="text" class="form-control" placeholder="精确搜索" ng-model="approvedKeyWord1" style="width: 100px;" ng-change="approvedPageNo=1;approvedSearch()">
+                            显示：<input type="text" class="form-control" placeholder="数量" ng-model="approvedPageSize" ng-init="" style="width: 60px;" ng-change="approvedPageNo=1;approvedSearch()">
+                            <!--共<span ng-bind="attrvalues.approvedAttr.length"></span>条-->
+                            <!-- /input-group -->
+                        </form>
+                    </div>
+
+                    <div class="row" ng-style="" style="border-top: 1px dashed #31b0d5;"
+                         ng-repeat="x in attrvalues.approvedAttr">
+                        <div class="container-fluid" ng-mouseleave="x.show=false">
+                            <div class="row">
+                                <div class="col-lg-1 attr-btn">
+                                    <button type="button" class="btn btn-default btn-font" ng-bind="$index+1"></button>
+                                </div>
+                                <div class="col-lg-4 attr-btn">
+                                    <button type="button" class="btn btn-primary" ng-bind="x.vname" ng-mouseenter="x.show=true"></button>
+                                </div>
+                                <div class="col-lg-6 attr-btn">
+                                    <button type="button" style="margin-right: 5px;" class="btn btn-info" ng-repeat="xx in x.valias" ng-bind="xx.name">
+                                    </button>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="check-box large" style="margin: 6px 5px 0px 0px;float: right;"><input type="checkbox" ng-checked="x.selected" ng-click="x.selected=!x.selected;approvedFilter()" id="approved_{{$index}}"/><label
+                                            for="approved_{{$index}}"></label></div>
+                                </div>
+                            </div>
+                            <div class="attr-detail" ng-show="x.show">
+                                <div class="row" style="padding: 0px 10px;">
+                                    <h5>{{x.vid}}.<small><cite></cite></small></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="text-align: right;">
+                        <ul style="margin: 8px 5px;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="approvedTotal" ng-model="approvedPageNo" items-per-page="approvedPageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="approvedSearch()"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 column" style="padding-left: 5px;padding-right: 5px;">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">未审核</h3></div>
+                <div class="panel-body">
+                    <!--<div class="row" ng-show="!attrvalues.notApprovedAttr||(attrvalues.notApprovedAttr&&attrvalues.notApprovedAttr.length<=0)">-->
+                        <!--<span style="display: block;text-align: center;">无未审核数据!</span>-->
+                    <!--</div>-->
+                    <div class="row">
+                        <form class="navbar-form navbar-left">
+                            <input type="text" class="form-control" placeholder="模糊搜索" ng-model="notApprovedKeyWord" style="width: 100px;" ng-change="notApprovedPageNo=1;notApprovedSearch()">
+                            <input type="text" class="form-control" placeholder="精确搜索" ng-model="notApprovedKeyWord1" style="width: 100px;" ng-change="notApprovedPageNo=1;notApprovedSearch()">
+                            显示：<input type="text" class="form-control" placeholder="数量" ng-model="notApprovedPageSize" style="width: 60px;" ng-change="notApprovedPageNo=1;notApprovedSearch()">
+                            <!--共<span ng-bind="attrvalues.notApprovedAttr.length"></span>条-->
+                            <button type="button" class="btn btn-default btn-font" style="position: absolute;right:15px;top:60px;" ng-click="notApprovedSelectAll()">全选</button>
+                            <!-- /input-group -->
+                        </form>
+                    </div>
+                    <div class="row" ng-style="" style="border-top: 1px dashed #31b0d5;"
+                         ng-repeat="x in attrvalues.notApprovedAttr">
+                        <div class="container-fluid" ng-mouseleave="hideDetail(x)">
+                            <div class="row">
+                                <div class="col-lg-1 attr-btn">
+                                    <button name="approved-index-btn" type="button" class="btn btn-default btn-font" ng-bind="$index+1">
+                                    </button>
+                                </div>
+                                <div class="col-lg-4 attr-btn">
+                                    <div class="btn-group">
+                                        <button type="button"
+                                                class="btn dropdown-toggle" ng-class="x.state==-3?'btn-success':'btn-primary'" ng-bind="x.vname">
+                                            <!--<span class="caret" style="margin-left:3px;"></span>-->
+                                        </button>
+                                        <!--<ul name="hehalf-name-ul" class="dropdown-menu hehalf-name"></ul>-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 attr-btn">
+                                    <button type="button" style="margin-right: 5px;" class="btn btn-warning" ng-mouseenter="showDetail(x,xx)"
+                                            ng-repeat="xx in x.valias" ng-init="$index">
+                                        <div class="check-box small" style="margin: 2px 5px 0px 0px;">
+                                            <input type="checkbox" ng-model="xx.selected" ng-checked="xx.selected"  ng-change="check(x)"
+                                                   id="small_notapproved_{{$parent.$index}}_{{$index}}"><label
+                                                    for="small_notapproved_{{$parent.$index}}_{{$index}}"></label>
+                                        </div>
+                                        <span ng-bind="xx.name"></span>
+                                    </button>
+                                </div>
+                                <div class="col-lg-1">
+                                    <div class="check-box large" style="margin:6px 5px 0px 0px;float: right;"><input ng-model="x.selected"
+                                                                                                                       type="checkbox" ng-checked="x.selected" ng-change="checkxx(x)"
+                                                                                                                       id="notapproved_{{$index}}"><label
+                                                for="notapproved_{{$index}}"></label></div>
+                                </div>
+                            </div>
+                            <div class="attr-detail" ng-show="x.show">
+                                <div ng-show="!(currDetail.details&&currDetail.details.length>0)" ng-bind="currDetail.details&&currDetail.details.length<=0?'无详情':'正在加载...'"></div>
+                                <div class="row" ng-repeat="detail in currDetail.details" style="padding: 0px 10px;">
+                                    <h5>{{detail.chan_name}}.{{detail.v_num}}.<small><cite>{{detail.items}}</cite></small></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="text-align: right;">
+                        <ul style="margin: 8px 5px;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="notApprovedTotal" ng-model="notApprovedPageNo" items-per-page="notApprovedPageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="notApprovedSearch()"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4 column"  style="padding-left: 5px;padding-right: 5px;">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">待审核</h3></div>
+                <div class="panel-body">
+                    <div class="row" ng-show="todoApprovedAttr.length<=0">
+                        <span style="display: block;text-align: center;">无待审核数据!</span>
+                    </div>
+
+                    <div class="row"
+                         ng-show="todoApprovedAttr.length>0">
+                        <form class="navbar-form navbar-left">
+                            <input type="text" class="form-control" placeholder="搜索" ng-model="searchtodoApproved" style="width: 150px;">
+                            显示：<input type="text" class="form-control" placeholder="数量" ng-model="todoApprovedlimit" ng-init="todoApprovedlimit=10" style="width: 60px;">
+                            共<span ng-bind="todoApprovedAttr.length"></span>条
+                            <button type="button" class="btn btn-default btn-font" style="position: absolute;right:15px;top:60px;" ng-click="todoSelectAll()">全选</button>
+                            <!-- /input-group -->
+                        </form>
+                    </div>
+
+                    <div class="row" ng-style="" style="border-top: 1px dashed #31b0d5;"
+                         ng-repeat="x in todoApprovedAttr | filter:searchtodoApproved |limitTo:todoApprovedlimit">
+                        <div class="col-lg-1 attr-btn">
+                            <button type="button" class="btn btn-default btn-font" ng-bind="$index+1"></button>
+                        </div>
+                        <div class="col-lg-4 attr-btn">
+                            <button type="button" class="btn" ng-class="x.state==-3?'btn-success':'btn-primary'" ng-bind="x.vname"></button>
+                        </div>
+                        <div class="col-lg-6 attr-btn">
+                            <button type="button" style="margin-right: 5px;" class="btn btn-warning" ng-repeat="xx in x.valias" ng-bind="xx.name">
+                            </button>
+                        </div>
+                        <div class="col-lg-1">
+                            <div class="check-box large" style="margin: 6px 5px 0px 0px;float: right;">
+                                <input type="checkbox" ng-checked="x.selected" ng-model="x.selected" ng-change="todoApprovedFilter()" id="todoapproved_{{$index}}"/><label for="todoapproved_{{$index}}"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="row">-->
+                        <!--<ul style="margin: 8px 0;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="total" ng-model="todoApprovedPageNo" items-per-page="pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="todoApprovedPageChanged()"></ul>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" style="margin-bottom: 100px;">
+</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row" style="text-align: right;padding-right:10px;">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default navbar-btn"
+                            ng-disabled="(approvedSelectedArray.length+notApprovedSelectedArray.length)<2||approvedSelectedArray.length>1||isSubmit"
+                            data-toggle="modal" data-target="#myModal" ng-click="mergeAttr()">合并属性
+                    </button>
+                    <button type="button" class="btn btn-default navbar-btn"
+                            ng-disabled="notApprovedSelectedArray.length<1 || approvedSelectedArray.length>1 || todoApprovedSelectedArray.length>1||isSubmit"
+                            ng-click="splitAttr()">拆分属性
+                    </button>
+                    <button type="button" class="btn btn-default navbar-btn"
+                            ng-disabled="notApprovedSelectedArray.length<1||approvedSelectedArray.length>0||isSubmit" data-toggle="modal" data-target="#myModal"
+                            ng-click="addAttr()">合并新增
+                    </button>
+                    <button type="button" class="btn btn-default navbar-btn"
+                            ng-disabled="notApprovedSelectedArray.length<1||approvedSelectedArray.length>0||isSubmit"
+                            ng-click="batchaddAttr()">批量新增
+                    </button>
+                    <button type="button" class="btn btn-default navbar-btn"
+                            ng-disabled="todoApprovedSelectedArray.length<1 && notApprovedSelectedArray.length<1 && approvedSelectedArray.length<1||isSubmit" ng-click="open()">删除属性
+                    </button>
+                    <button type="button" class="btn btn-default navbar-btn"
+                            ng-disabled="todoApprovedSelectedArray.length<1||isSubmit" ng-click="confirmAttr()">确认审核
+                    </button>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel" ng-bind="modaltitle"></h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" placeholder="请输入名称" ng-model="currentModal.vname" ng-change="currentVChange()"><br>
+                <div ng-bind="(addExisted&&modaltitle!='合并属性')?'已存在':''" style="color: #ff0000"></div><br>
+                <button type="button" style="margin-right: 5px;" class="btn btn-warning"
+                        ng-repeat="x in currentModal.valias" ng-click="currentModal.vname=x.name;currentVChange()" ng-bind="x.name">
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="myModal_ok" ng-disabled="currentModal.vname=='' || (addExisted&&modaltitle!='合并属性')">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">提示</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        确定删除选中记录？
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">确定</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">取消</button>
+    </div>
+</script>

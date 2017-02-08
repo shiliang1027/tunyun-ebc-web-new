@@ -1,0 +1,107 @@
+<div class="col-md-8">
+    <panel1 title="行业政策舆情">
+        <table class="table1">
+            <thead>
+            <tr>
+                <td></td>
+                <td>政策名称</td>
+                <td>关注度</td>
+                <td>正面</td>
+                <td>中性</td>
+                <td>负面</td>
+                <td style="width:350px;">关注度占比</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in currentTab.data.InduPolicy">
+                <td ng-style="$index==1?{'min-width': '20px','text-align': 'center'}:{}" ng-repeat="(k,v) in x" ng-if="$index!=0">
+                    {{v}}
+                </td>
+                <td style="vertical-align: top;" ng-if="$index==0" rowspan="{{currentTab.data.InduPolicy.length}}">
+                    <div highchart style="height: 300px;" config="currentTab.data.InduPolicyRatio"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </panel1>
+    <panel1 title="行业话题舆情">
+        <div highchart style="height: 300px;" config="currentTab.data.InduTopicSet"></div>
+    </panel1>
+    <panel1 title="热门品牌舆情">
+        <table class="table1">
+            <thead>
+            <tr>
+                <td></td>
+                <td>政策名称</td>
+                <td>关注度</td>
+                <td>正面</td>
+                <td>中性</td>
+                <td>负面</td>
+                <td style="width:350px;">关注度占比</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in currentTab.data.HotBrandSet">
+                <td ng-style="$index==1?{'min-width': '20px','text-align': 'center'}:{}" ng-repeat="(k,v) in x" ng-if="$index!=0">
+                    {{v}}
+                </td>
+                <td style="vertical-align: top;" ng-if="$index==0" rowspan="{{currentTab.data.HotBrandSet.length}}">
+                    <div highchart style="height: 300px;" config="currentTab.data.HotBrandSetRatio"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </panel1>
+    <panel1 title="热门品类舆情">
+        <table class="table1">
+            <thead>
+            <tr>
+                <td></td>
+                <td>政策名称</td>
+                <td>关注度</td>
+                <td>正面</td>
+                <td>中性</td>
+                <td>负面</td>
+                <td style="width:350px;">关注度占比</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in currentTab.data.HotCategorySet">
+                <td ng-style="$index==1?{'min-width': '20px','text-align': 'center'}:{}" ng-repeat="(k,v) in x" ng-if="$index!=0">
+                    {{v}}
+                </td>
+                <td style="vertical-align: top;" ng-if="$index==0" rowspan="{{currentTab.data.HotCategorySet.length}}">
+                    <div highchart style="height: 300px;" config="currentTab.data.HotCategorySetRatio"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </panel1>
+
+</div>
+<div class="col-md-4">
+    <panel2 title="热门政策动态">
+        <div class="container-fluid">
+            <div class="row borderbottom2" ng-repeat="x in currentTab.data.HotPolicyDynamic">
+                <vane item="x"></vane>
+            </div>
+        </div>
+    </panel2>
+    <panel2 title="行业话题标签云">
+        <jqcloud words="currentTab.data.InduTopicLable" height="300" auto-resize="true"></jqcloud>
+    </panel2>
+    <panel2 title="热门品牌动态">
+        <div class="container-fluid">
+            <div class="row borderbottom2" ng-repeat="x in currentTab.data.HotBrandDynamic">
+                <vane item="x"></vane>
+            </div>
+        </div>
+    </panel2>
+    <panel2 title="热门品类动态">
+        <div class="container-fluid">
+            <div class="row borderbottom2" ng-repeat="x in currentTab.data.HotCategoryDynamic">
+                <vane item="x"></vane>
+            </div>
+        </div>
+    </panel2>
+</div>

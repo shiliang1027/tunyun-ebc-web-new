@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content=""/>
+    <%- include header.html %>
+</head>
+<body id="login">
+  <div class="login-logo">
+    <a href="../public/tpl/index.html"><img src="images/logo.png" alt=""/></a>
+  </div>
+  <h2 class="form-heading">Register</h2>
+  <form class="form-signin app-cam" action="../public/tpl/index.html">
+      <p>Enter your personal details below</p>
+      <input type="text" class="form-control1" placeholder="Full Name" autofocus="">
+      <input type="text" class="form-control1" placeholder="Address" autofocus="">
+      <input type="text" class="form-control1" placeholder="Email" autofocus="">
+      <input type="text" class="form-control1" placeholder="City/Town" autofocus="">
+      <div class="radios">
+        <label for="radio-01" class="label_radio">
+            <input type="radio" checked=""> Male
+        </label>
+        <label for="radio-02" class="label_radio">
+            <input type="radio"> Female
+        </label>
+	  </div>
+	  <p> Enter your account details below</p>
+      <input type="text" class="form-control1" placeholder="User Name" autofocus="">
+      <input type="password" class="form-control1" placeholder="Password">
+      <input type="password" class="form-control1" placeholder="Re-type Password">
+      <label class="checkbox-custom check-success">
+          <input type="checkbox" value="agree this condition" id="checkbox1"> <label for="checkbox1">I agree to the Terms of Service and Privacy Policy</label>
+      </label>
+      <button class="btn btn-lg btn-success1 btn-block" type="submit">Submit</button>
+      <div class="registration">
+          Already Registered.
+          <a class="" href="/login">
+              Login
+          </a>
+      </div>
+  </form>
+   <div class="copy_layout login register">
+       <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+   </div>
+</body>
+</html>

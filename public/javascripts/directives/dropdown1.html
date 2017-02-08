@@ -1,0 +1,19 @@
+<div class="searchdiv" ng-init="init()">
+        <div class="selectInput_box">
+            <div class="select_input">
+                <span class="select_input_title" ng-bind="title+'：'" ></span>
+                <span class="select_input_value" ng-bind="seletedItem[value]" title="{{seletedItem[value]}}"></span>
+            </div>
+            <div class="select_btn">
+                <div ng-if="icon && icon!=''" ng-class="icon" class="button" ng-click="show()"></div>
+                <div ng-if="!icon || icon==''" class="button_submit" ng-bind="btntitle" ng-click="show()"></div>
+            </div>
+
+        </div>
+        <div class="input_list_box"
+             style="">
+            <ul class="input_list_box_ul">
+                <li ng-repeat="item in items"><a ng-click="itemClick(item);" ng-bind="item[value]"></a></li>
+            </ul>
+        </div>
+</div>

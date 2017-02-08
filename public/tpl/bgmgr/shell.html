@@ -1,0 +1,23 @@
+
+<div>
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <select class="form-control" name="shell" ng-model="currentShell" ng-options="x.name for x in shells" required>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text"  class="form-control" uib-datepicker-popup ng-model="startTime" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+        </div>
+        <div class="form-group" ng-repeat="param in currentShell.params">
+            <input ng-if="param.type=='text'" ng-model="param.value" type="text" class="form-control" placeholder="{{param.placeholder}}" required>
+            <select ng-if="param.type=='select'" ng-model="param.select" class="form-control" ng-options="x for x in param.list" required>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="do()">执行</button>
+    </form>
+</div>

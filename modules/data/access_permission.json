@@ -1,0 +1,184 @@
+{
+  "user1": {
+    "menuInfo": [
+      {
+        "itemId": 1001,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-home_u36_seled.png",
+        "itemTitle": "首页",
+        "itemIcon": "images/comp/tunyun.navigator/img-home_u36.png"
+      },
+      {
+        "itemId": 1002,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-cyqy_u38_seled.png",
+        "itemTitle": "产业前沿",
+        "itemIcon": "images/comp/tunyun.navigator/img-cyqy_u38.png",
+        "itemMenu": [
+          {
+            "itemId": 2001,
+            "itemTitle": "产业潮流动态"
+          },
+          {
+            "itemId": 2002,
+            "itemTitle": "网媒舆情分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1003,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-hyfx_u40_seled.png",
+        "itemTitle": "行业分析",
+        "itemIcon": "images/comp/tunyun.navigator/img-hyfx_u40.png",
+        "itemMenu": [
+          {
+            "itemId": 3001,
+            "itemTitle": "行业综合分析"
+          },
+          {
+            "itemId": 3002,
+            "itemTitle": "行业品类分析"
+          },
+          {
+            "itemId": 3003,
+            "itemTitle": "行业渠道分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1005,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-jzfx_u44_seled.png",
+        "itemTitle": "竞争分析",
+        "itemIcon": "images/comp/tunyun.navigator/img-jzfx_u44.png",
+        "itemMenu": [
+          {
+            "itemId": 5001,
+            "itemTitle": "竞争品牌分析"
+          },
+          {
+            "itemId": 5002,
+            "itemTitle": "竞争店铺分析"
+          },
+          {
+            "itemId": 5003,
+            "itemTitle": "竞争单品分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1006,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-khfx_u46_seled.png",
+        "itemTitle": "客户分析",
+        "itemIcon": "images/comp/tunyun.navigator/img-khfx_u46.png",
+        "itemMenu": [
+          {
+            "itemId": 6001,
+            "itemTitle": "电商访客分析"
+          }
+        ]
+      }
+    ],
+    "induInfo": [
+      {
+        "induName": "dress",
+        "induId": 2
+      },
+        {
+            "induName": "dress1",
+            "induId": 3
+        }
+    ]
+  },
+  "user2": {
+    "menuInfo": [
+      {
+        "itemId": 1001,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-home_u36_seled.png",
+        "itemTitle": "首页",
+        "itemIcon": "images/comp/tunyun.navigator/img-home_u36.png"
+      },
+      {
+        "itemId": 1002,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-cyqy_u38_seled.png",
+        "itemTitle": "产业前沿",
+        "itemIcon": "images/comp/tunyun.navigator/img-cyqy_u38.png",
+        "itemMenu": [
+          {
+            "itemId": 2001,
+            "itemTitle": "产业潮流动态"
+          },
+          {
+            "itemId": 2002,
+            "itemTitle": "网媒舆情分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1003,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-hyfx_u40_seled.png",
+        "itemTitle": "行业分析",
+        "itemIcon": "images/comp/tunyun.navigator/img-hyfx_u40.png",
+        "itemMenu": [
+          {
+            "itemId": 3001,
+            "itemTitle": "行业综合分析"
+          },
+          {
+            "itemId": 3002,
+            "itemTitle": "行业品类分析"
+          },
+          {
+            "itemId": 3003,
+            "itemTitle": "行业渠道分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1005,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-jzfx_u44_seled",
+        "itemTitle": "竞争分析",
+        "itemIcon": "images/comp/tunyun.navigator/img-jzfx_u44.png",
+        "itemMenu": [
+          {
+            "itemId": 5001,
+            "itemTitle": "竞争品牌分析"
+          },
+          {
+            "itemId": 5002,
+            "itemTitle": "竞争店铺分析"
+          },
+          {
+            "itemId": 5003,
+            "itemTitle": "竞争单品分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1006,
+        "itemFocusIcon": "images/comp/tunyun.navigator/img-khfx_u46_seled.png",
+        "itemTitle": "客户分析",
+        "itemIcon": "images/comp/tunyun.navigator/img-khfx_u46.png",
+        "itemMenu": [
+          {
+            "itemId": 6001,
+            "itemTitle": "电商访客分析"
+          }
+        ]
+      },
+      {
+        "itemId": 1007,
+        "itemIcon": "images/comp/tunyun.navigator/img-znyx_u48.png",
+        "itemFocusIcon": "",
+        "itemTitle": "智能营销"
+      }
+    ],
+    "induInfo": [
+      {
+        "induName": "内衣",
+        "induId": 2
+      },
+        {
+            "induName": "内衣1",
+            "induId": 3
+        }
+    ]
+  }
+}

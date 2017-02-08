@@ -1,0 +1,621 @@
+{"code": "1", "detail": "查询成功", "value": {
+    "notApprovedAttr": [
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "厚度",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "厚度",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "国家及地区",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "国家及地区",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "秒针计时功能",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "秒针计时功能",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "类别",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "类别",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "衣长",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "衣长",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "裤型",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "裤型",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "适用人群",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "适用人群",
+            "state": "-3",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "0",
+                    "name": "销售地区",
+                    "uid": ""
+                }
+            ],
+            "pid": "0",
+            "pname": "销售地区",
+            "state": "-3",
+            "updTime": 0
+        }
+    ],
+    "approvedAttr": [
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "1",
+                    "name": "brand",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "1",
+                    "name": "品牌",
+                    "uid": ""
+                }
+            ],
+            "pid": "1",
+            "pname": "品牌",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "123",
+                    "name": "商品产地",
+                    "uid": ""
+                }
+            ],
+            "pid": "123",
+            "pname": "商品产地",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "121",
+                    "name": "商品毛重",
+                    "uid": ""
+                }
+            ],
+            "pid": "121",
+            "pname": "商品毛重",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "101",
+                    "name": "图案",
+                    "uid": ""
+                }
+            ],
+            "pid": "101",
+            "pname": "图案",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "110",
+                    "name": "尺寸",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "110",
+                    "name": "尺码",
+                    "uid": ""
+                }
+            ],
+            "pid": "110",
+            "pname": "尺码",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "108",
+                    "name": "上市时间",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "108",
+                    "name": "年份季节",
+                    "uid": ""
+                }
+            ],
+            "pid": "108",
+            "pname": "年份季节",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "103",
+                    "name": "廓形",
+                    "uid": ""
+                }
+            ],
+            "pid": "103",
+            "pname": "廓形",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "106",
+                    "name": "成分含量",
+                    "uid": ""
+                }
+            ],
+            "pid": "106",
+            "pname": "成分含量",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "112",
+                    "name": "材质",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "112",
+                    "name": "质地",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "112",
+                    "name": "面料",
+                    "uid": ""
+                }
+            ],
+            "pid": "112",
+            "pname": "材质",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "118",
+                    "name": "分类",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "118",
+                    "name": "款式",
+                    "uid": ""
+                }
+            ],
+            "pid": "118",
+            "pname": "款式",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "119",
+                    "name": "流行元素",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "119",
+                    "name": "流行元素/工艺",
+                    "uid": ""
+                }
+            ],
+            "pid": "119",
+            "pname": "流行元素/工艺",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "124",
+                    "name": "版型",
+                    "uid": ""
+                }
+            ],
+            "pid": "124",
+            "pname": "版型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "113",
+                    "name": "组合形式",
+                    "uid": ""
+                }
+            ],
+            "pid": "113",
+            "pname": "组合形式",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "109",
+                    "name": "腰型",
+                    "uid": ""
+                }
+            ],
+            "pid": "109",
+            "pname": "腰型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "107",
+                    "name": "衣门襟",
+                    "uid": ""
+                }
+            ],
+            "pid": "107",
+            "pname": "衣门襟",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "104",
+                    "name": "袖型",
+                    "uid": ""
+                }
+            ],
+            "pid": "104",
+            "pname": "袖型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "116",
+                    "name": "袖长",
+                    "uid": ""
+                }
+            ],
+            "pid": "116",
+            "pname": "袖长",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "102",
+                    "name": "裙型",
+                    "uid": ""
+                }
+            ],
+            "pid": "102",
+            "pname": "裙型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "114",
+                    "name": "裙长",
+                    "uid": ""
+                }
+            ],
+            "pid": "114",
+            "pname": "裙长",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "111",
+                    "name": "适用年龄",
+                    "uid": ""
+                }
+            ],
+            "pid": "111",
+            "pname": "适用年龄",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "122",
+                    "name": "适用类型",
+                    "uid": ""
+                }
+            ],
+            "pid": "122",
+            "pname": "适用类型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "120",
+                    "name": "销售渠道类型",
+                    "uid": ""
+                }
+            ],
+            "pid": "120",
+            "pname": "销售渠道类型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "115",
+                    "name": "领型",
+                    "uid": ""
+                }
+            ],
+            "pid": "115",
+            "pname": "领型",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "2",
+                    "name": "color",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "2",
+                    "name": "颜色",
+                    "uid": ""
+                },
+                {
+                    "details": [],
+                    "id": "2",
+                    "name": "颜色分类",
+                    "uid": ""
+                }
+            ],
+            "pid": "2",
+            "pname": "颜色",
+            "state": "1",
+            "updTime": 0
+        },
+        {
+            "addTime": 0,
+            "cid": "50200000",
+            "delTime": 0,
+            "palias": [
+                {
+                    "details": [],
+                    "id": "117",
+                    "name": "风格",
+                    "uid": ""
+                }
+            ],
+            "pid": "117",
+            "pname": "风格",
+            "state": "1",
+            "updTime": 0
+        }
+    ]
+}}

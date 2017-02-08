@@ -1,0 +1,668 @@
+{
+  "a": {
+    "notApprovedAttrDetail": [
+      {
+        "v_alias": "动物图案",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 705
+          }
+        ]
+      },
+      {
+        "v_alias": "大花",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 112
+          }
+        ]
+      },
+      {
+        "v_alias": "手绘",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "图案",
+              "流行元素/工艺"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 1
+          }
+        ]
+      },
+      {
+        "v_alias": "人物",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 3
+          }
+        ]
+      },
+      {
+        "v_alias": "其他",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "组合形式",
+              "衣门襟",
+              "领型",
+              "裙型",
+              "图案",
+              "材质",
+              "面料",
+              "袖型"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 1040
+          }
+        ]
+      },
+      {
+        "v_alias": "碎花",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "流行元素/工艺",
+              "图案",
+              "颜色分类"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 2
+          }
+        ]
+      },
+      {
+        "v_alias": "纯色",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "图案",
+              "流行元素/工艺"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 10
+          }
+        ]
+      },
+      {
+        "v_alias": "千鸟格",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案",
+              "颜色分类"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 96
+          }
+        ]
+      },
+      {
+        "v_alias": "斑马纹",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案",
+              "流行元素/工艺"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 19
+          }
+        ]
+      },
+      {
+        "v_alias": "豹纹",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 77
+          }
+        ]
+      },
+      {
+        "v_alias": "花色",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案",
+              "颜色分类",
+              "流行元素/工艺"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 7918
+          }
+        ]
+      },
+      {
+        "v_alias": "卡通动漫",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 758
+          }
+        ]
+      },
+      {
+        "v_alias": "抽象图案",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 621
+          }
+        ]
+      },
+      {
+        "v_alias": "风景",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 160
+          }
+        ]
+      },
+      {
+        "v_alias": "条纹",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "流行元素/工艺",
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 988
+          }
+        ]
+      },
+      {
+        "v_alias": "格子",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "颜色分类",
+              "图案",
+              "流行元素/工艺"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 196
+          }
+        ]
+      },
+      {
+        "v_alias": "圆点",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案",
+              "颜色分类"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 869
+          }
+        ]
+      },
+      {
+        "v_alias": "动物纹",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 40
+          }
+        ]
+      },
+      {
+        "v_alias": "建筑",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案",
+              "颜色分类"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 51
+          }
+        ]
+      },
+      {
+        "v_alias": "字母",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "图案",
+              "颜色分类",
+              "流行元素/工艺"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 976
+          }
+        ]
+      }
+    ],
+    "notApprovedAttr": [
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "动物图案",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "动物图案"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "大花",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "大花"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "手绘",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "手绘"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "人物",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "人物"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "其他",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "其他"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "碎花",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "碎花"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "纯色",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "纯色"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "千鸟格",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "千鸟格"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "斑马纹",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "斑马纹"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "豹纹",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "豹纹"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "花色",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "花色"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "卡通动漫",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "卡通动漫"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "抽象图案",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "抽象图案"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "风景",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "风景"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "条纹",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "条纹"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "格子",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "格子"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "圆点",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "圆点"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "动物纹",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "动物纹"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "建筑",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "建筑"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "字母",
+            "pid": 2227026696,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "字母"
+      }
+    ],
+    "approvedAttr": []
+  },
+  "b": {
+    "notApprovedAttrDetail": [
+      {
+        "v_alias": "X型",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "廓形"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 3120
+          }
+        ]
+      },
+      {
+        "v_alias": "H型",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "流行元素/工艺",
+              "廓形"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 1
+          }
+        ]
+      },
+      {
+        "v_alias": "T型",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "廓形"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 324
+          }
+        ]
+      },
+      {
+        "v_alias": "A型",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "廓形"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 21247
+          }
+        ]
+      },
+      {
+        "v_alias": "O型",
+        "v_detail": [
+          {
+            "chan_id": 1,
+            "domain": [
+              "廓形"
+            ],
+            "chan_name": "taobao",
+            "refer_num": 303
+          }
+        ]
+      }
+    ],
+    "notApprovedAttr": [
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "X型",
+            "pid": 2427524418,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "X型"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "H型",
+            "pid": 2427524418,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "H型"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "T型",
+            "pid": 2427524418,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "T型"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "A型",
+            "pid": 2427524418,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "A型"
+      },
+      {
+        "v_alias": [
+          {
+            "vid": 0,
+            "alias": "O型",
+            "pid": 2427524418,
+            "cid": 50200000
+          }
+        ],
+        "v_name": "O型"
+      }
+    ],
+    "approvedAttr": [
+      {
+        "vid": 1223,
+        "v_name": "X型",
+        "pid": 242752441118,
+        "cid": 50200000,
+        "v_alias": [
+          {
+            "alias": "X型"
+          }
+        ]
+      },
+      {
+        "vid": 12223,
+        "v_name": "哈哈",
+        "pid": 2427522441118,
+        "cid": 50200000,
+        "v_alias": [
+          {
+            "alias": "哈哈"
+          }
+        ]
+      }
+    ]
+  }
+}

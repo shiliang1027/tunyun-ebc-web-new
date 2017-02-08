@@ -1,0 +1,16 @@
+{
+  "user1": {
+    "uid": 100001,
+    "tenant_id": 1,
+    "user_name": "gjb",
+    "value_1": "行云",
+    "StatusCode": 200
+  },
+  "user2": {
+    "uid": 100002,
+    "tenant_id": 1,
+    "user_name": "gaojinbao",
+    "value_1": "甲乙丙丁猪",
+    "StatusCode": 404
+  }
+}

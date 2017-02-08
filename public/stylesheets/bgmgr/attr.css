@@ -1,0 +1,131 @@
+.check-box {
+  float: left;
+  width: 17px;
+  height: 17px;
+  overflow: hidden;
+  position: relative;
+}
+.check-box input[type=checkbox] {
+  display: none;
+}
+.check-box label {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: #FFF;
+  border: 1px solid #ddd;
+}
+.check-box label:after {
+  display: none;
+  opacity: 1;
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 7px;
+  background: transparent;
+  top: 3px;
+  left: 4px;
+  border: 3px solid #3dbe1d;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.check-box input[type=checkbox]:checked + label:after {
+  display: inherit;
+}
+.small {
+  width: 17px;
+  height: 17px;
+}
+.small label {
+  width: 16px;
+  height: 16px;
+}
+.small label:after {
+  width: 11px;
+  height: 7px;
+  top: 3px;
+  left: 4px;
+}
+.large {
+  width: 30px;
+  height: 30px;
+}
+.large label {
+  width: 29px;
+  height: 29px;
+}
+.large label:after {
+  width: 20px;
+  height: 12px;
+  top: 6px;
+  left: 5px;
+}
+.approved {
+  margin-bottom: 15px;
+  border: 1px solid #dee5e0;
+}
+.attr-btn {
+  padding-bottom: 10px;
+}
+.attr-btn button {
+  margin-top: 10px;
+}
+.attr-btn .btn-font {
+  color: #BBBBBB;
+  font-weight: bold;
+  font-size: 14px;
+}
+.attr-btn .btn {
+  padding: 0px 6px;
+}
+.not-approved {
+  border: 1px dashed rgba(34, 73, 46, 0.33);
+}
+.not-approved .attr-detail {
+  background-color: transparent;
+  padding-top: 10px;
+}
+.not-approved .attr-detail .attr-detail-label {
+  font-size: 13px;
+  color: #b5bba6;
+}
+.not-approved .attr-detail .attr-detail-label span {
+  display: block;
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+.not-approved .hehalf-name > li {
+  cursor: default;
+  padding: 5px 0px 5px 10px;
+}
+.not-approved .hehalf-name > li:hover {
+  background-color: #f0f0f0;
+}
+.bottom-menu {
+  font-size: 12px;
+}
+.bottom-menu span {
+  display: block;
+  float: right;
+  margin-top: 15px;
+}
+.bottom-menu .btn-number button {
+  font-size: 10px;
+  margin-right: 5px;
+}
+#lenovo-input-attr-group .hehalf-name {
+  max-height: 500px;
+  overflow: auto;
+}
+#lenovo-input-attr-group .hehalf-name > li {
+  cursor: default;
+  padding: 5px 0px 5px 10px;
+}
+#lenovo-input-attr-group .hehalf-name > li:hover {
+  background-color: #f0f0f0;
+}

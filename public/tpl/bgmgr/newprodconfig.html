@@ -1,0 +1,99 @@
+
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+
+        <form class="navbar-form" role="form" style="text-align: right;">
+                <div class="input-group">
+                    <input type="text" style="width: 100px;" class="form-control" uib-datepicker-popup ng-model="time" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                </div>
+            <div class="input-group" style="">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in categs">
+                            <a href="javascript:void(0)" ng-click="categChange(x)"
+                               ng-bind="x.cat_name" ng-style="x.style"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentAttr.pname||'选择属性'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in attrs" ng-click="attrChange(x)"><a href="" ng-bind="x.pname"></a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <span class="input-group-addon" style="cursor: pointer;" ng-click="search()">查 询</span>
+            </div>
+            <!-- /input-group -->
+        </form>
+    </div>
+</div>
+
+    <div uib-alert ng-repeat="alert in alerts"
+         ng-class="'navbar-fixed-top text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">
+        {{alert.msg}}
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="checkbox" style="margin: 0;">
+                            <label>
+                                <input type="checkbox" ng-model="selectedAll" ng-change="selectAll()"> 全选
+                            </label>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <!--<div class="row" ng-show="!attrvalues.approvedAttr||(attrvalues.approvedAttr&&attrvalues.approvedAttr.length<=0)">-->
+                    <!--<span style="display: block;text-align: center;">无已审核数据!</span>-->
+                    <!--</div>-->
+
+                    <div class="row">
+                        <form class="navbar-form navbar-left">
+                            <input type="text" class="form-control" placeholder="模糊搜索" ng-model="keyword" style="width: 100px;" ng-change="pageNo=1;search()">
+                            <input type="text" class="form-control" placeholder="精确搜索" ng-model="keyword1" style="width: 100px;" ng-change="pageNo=1;search()">
+                            显示：<input type="text" class="form-control" placeholder="数量" ng-model="pageSize" ng-init="" style="width: 60px;" ng-change="pageNo=1;search()">
+                            <!--共<span ng-bind="attrvalues.approvedAttr.length"></span>条-->
+                            <!-- /input-group -->
+                        </form>
+                    </div>
+
+                    <div class="row" style="padding: 0 15px;">
+                        <div class="col-xs-2"  ng-repeat="x in datas">
+                            <label class="checkbox-inline" ng-init="x.selected=(x.type_id&&x.type_id!='')?true:false;">
+                                <input type="checkbox" ng-model="x.selected" ng-checked="x.selected?true:false"> {{x.v_name}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 0 15px;">
+                        <ul style="" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="total" ng-model="pageNo" items-per-page="pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="search()"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container-fluid" style="margin-bottom: 100px;">
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row" style="text-align: right;padding-right:10px;">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default navbar-btn" ng-click="save()">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+
+        <form class="navbar-form" role="form" style="text-align: right;">
+            <div class="input-group" style="">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in categs">
+                            <a href="javascript:void(0)" ng-click="categChange(x)"
+                                                       ng-bind="x.cat_name" ng-style="x.style"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown" style="min-width:100px; ">
+                        <span ng-bind="currentChan.chaname||'选择渠道'"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="x in chans"><a href="javascript:void(0)" ng-click="changeChan(x)"
+                                                      ng-bind="x.chaname"></a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <span class="input-group-addon" style="cursor: pointer" ng-click="search()">查 询</span>
+            </div>
+            <!-- /input-group -->
+        </form>
+    </div>
+</div>
+
+<div>
+    <div uib-alert ng-repeat="alert in alerts"
+         ng-class="'navbar-fixed-top text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">
+        {{alert.msg}}
+    </div>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>前表达式</th>
+            <th>后表达式</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in datas">
+            <td ng-bind="x.p_name"></td>
+            <td style="padding-top:5px;" ng-init="initRules(x.preRules,1)">
+                <div class="row" style="margin-bottom: 5px;" ng-repeat="xx in x.preRules">
+                    <div class="col-md-4" style="padding-right: 0px;padding-left: 0px;">
+                        <input type="text" class="form-control" ng-model="xx.expr" ng-value="xx.expr" data-ng-trim="false">
+                    </div>
+                    <div class="col-md-3" style="padding-right: 0px;padding-left: 0px;">
+                        <input type="text" class="form-control" ng-model="xx.replace_str" ng-value="xx.replace_str" data-ng-trim="false">
+                    </div>
+                    <div class="col-md-3" style="padding-right: 0px;padding-left: 0px;">
+                        <button ng-show="$index==0" type="button" class="btn btn-default" ng-click="add(x.preRules,1)">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </button>
+                        <button ng-show="$index>0" type="button" class="btn btn-default" ng-click="del(x.preRules,xx)">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" ng-click="up(x.preRules,xx)">
+                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" ng-click="down(x.preRules,xx)">
+                            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </td>
+            <td style="padding-top:5px;" ng-init="initRules(x.afterRules,2)">
+                <div class="row" style="margin-bottom: 5px;" ng-repeat="xx in x.afterRules">
+                    <div class="col-md-4" style="padding-right: 0px;padding-left: 0px;">
+                        <input type="text" class="form-control" ng-model="xx.expr" ng-value="xx.expr" data-ng-trim="false">
+                    </div>
+                    <div class="col-md-3" style="padding-right: 0px;padding-left: 0px;">
+                        <input type="text" class="form-control" ng-model="xx.replace_str" ng-value="xx.replace_str" data-ng-trim="false">
+                    </div>
+                    <div class="col-md-3" style="padding-right: 0px;padding-left: 0px;">
+                        <button ng-show="$index==0" type="button" class="btn btn-default"
+                                ng-click="add(x.afterRules,2)">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </button>
+                        <button ng-show="$index>0" type="button" class="btn btn-default"
+                                ng-click="del(x.afterRules,xx)">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" ng-click="up(x.afterRules,xx)">
+                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default" ng-click="down(x.afterRules,xx)">
+                            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <button type="button" class="btn btn-default" ng-click="save(x)">保存</button>
+                <button type="button" class="btn btn-default" ng-click="open(x)">清空</button>
+                <button type="button" class="btn btn-default" ng-click="test(x)">测试</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">选择日期</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup
+                                   ng-model="time" is-open="popup1.opened" datepicker-options="dateOptions"
+                                   ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i
+                            class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" ng-click="doTest()">测试</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">提示</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        确定清空记录？
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">确定</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">取消</button>
+    </div>
+</script>

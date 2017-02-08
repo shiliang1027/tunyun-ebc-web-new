@@ -1,0 +1,14 @@
+<div class="graphs induanalysis" ng-init="init()">
+    <div class="container-fluid">
+        <div class="row" style="position: relative;">
+            <div class="fixed" style="position: relative;">
+                <uib-tabset active="active">
+                    <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}" disable="tab.disabled" ng-click="tabSelect(tab)">
+                    </uib-tab>
+                </uib-tabset>
+                <div ng-include="currentTab.templete"></div>
+            </div>
+
+        </div>
+    </div>
+</div>

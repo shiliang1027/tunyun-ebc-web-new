@@ -1,0 +1,107 @@
+
+<div class="navbar navbar-default" style="margin-bottom: 15px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding: 0px;">
+                <img alt="Brand" src="/images/u822.png">
+            </a>
+        </div>
+
+        <form class="navbar-form" role="form" style="text-align: right;">
+                <div class="input-group">
+                    <input type="text" style="width: 100px;" class="form-control" uib-datepicker-popup ng-model="time" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                </div>
+            <div class="input-group" style="">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span ng-bind="currentCat.cat_name||'选择品类'"></span> <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" style="margin-bottom: 100px;">
+                        <li ng-repeat="x in categs">
+                            <a href="javascript:void(0)" ng-click="categChange(x)"
+                               ng-bind="x.cat_name" ng-style="x.style"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown" style="min-width:100px; ">
+                        <span ng-bind="currentChan.chaname||'选择渠道'"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="x in chans"><a href="javascript:void(0)" ng-click="changeChan(x)"
+                                                      ng-bind="x.chaname"></a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <span class="input-group-addon" style="cursor: pointer;" ng-click="search()">查 询</span>
+            </div>
+            <!-- /input-group -->
+        </form>
+    </div>
+</div>
+
+<div>
+    <div uib-alert ng-repeat="alert in alerts"
+         ng-class="'navbar-fixed-top text-center alert-' + (alert.type || 'warning')" close="closeAlert($index)">
+        {{alert.msg}}
+    </div>
+    <div class="table-responsive">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th nowrap="nowrap">
+                    <label>
+                        <input type="checkbox" ng-change="selectAll()" ng-model="isSelectAll">全选
+                    </label>
+                </th>
+                <th  nowrap="nowrap">属性名称</th>
+                <th nowrap="nowrap">引用次数</th>
+                <th nowrap="nowrap">属性值样本</th>
+                <th nowrap="nowrap">是否多值域</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in datas">
+                <td>
+                    <div class="checkbox" ng-init="x.selected=x.p_name1&&x.p_name1!=''?true:false;x.isMutil=x.mutil==1?true:false">
+                        <label>
+                            <input type="checkbox" ng-model="x.selected" ng-checked="x.selected">
+                        </label>
+                    </div>
+                </td>
+                <td ng-bind="x.p_name"></td>
+                <td ng-bind="x.count"></td>
+                <td ng-bind="x.p_value" style="word-break:break-all"></td>
+                <td>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="x.isMutil" ng-checked="x.isMutil">是
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+<div class="container-fluid" style="margin-bottom: 100px;">
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row" style="text-align: right;padding-right:10px;">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default navbar-btn" ng-click="create()">生成数据</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default navbar-btn" ng-click="save()">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

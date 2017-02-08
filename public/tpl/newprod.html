@@ -1,0 +1,264 @@
+<div class="graphs" ng-init="refresh()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="fixed" style="position:relative;">
+                <uib-tabset active="active">
+                    <uib-tab index="0" heading="{{currentCat.name}}品类" ng-click="tabSelect(0)"></uib-tab>
+                    <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.v_name}}" disable="tab.disabled" ng-click="tabSelect($index+1)">
+                    </uib-tab>
+                </uib-tabset>
+                <!--<select class="form-control" ng-model="newprod.selectedtime" ng-required="true" style="position: absolute;top: -6px;width: 150px;right: 0px;  padding: 0;height: 28px;" ng-change="timeChange()" ng-options="x.stat_time==-1?'全部':x.stat_time*1000|date:'yyyy/MM/dd' for x in times">-->
+                <!--</select>-->
+
+                <dropdown1 title="策划日期" items="times" btntitle="选日期" icon="glyphicon glyphicon-calendar" seleted-item="newprod.selectedtime" action="timeChange(item)" style="right: 220px;width:200px;height: 38px;" absoluteTop="0px" absoluteTop="0px" absoluteRight="220px" fixedTop="0px" fixedRight="256px"></dropdown1>
+                <dropdown1 title="当前品类" items="categs" btntitle="选品类" seleted-item="currentCat" action="categChange(item)"  style="width:210px;height: 38px;" absoluteTop="0px" absoluteTop="0px" absoluteRight="0px" fixedTop="0px" fixedRight="36px"></dropdown1>
+            </div>
+        </div>
+        <div class="row"  style="position: relative;">
+            <div class="col-md-8">
+                <panel1 title="新品配置方案" style="position: relative;">
+                    <!--<button type="button" class="btn btn-default btn-xs" style="position: absolute;right: 0;top: 0px;" data-toggle="modal" data-target="#myModal1">-->
+                    <!--<span class="glyphicon glyphicon glyphicon-cog"></span> 设置参数-->
+                    <!--</button>-->
+
+                    <!--<select class="form-control" ng-model="time" style="position: absolute;top: -6px;width: 150px;right: 0px;  padding: 0;height: 28px;" ng-change="timeChange()">-->
+                    <!--<option ng-repeat="x in times" value="{{x}}">{{x==-1?'全部':x*1000|date:'yyyy/MM/dd'}}</option>-->
+                    <!--</select>-->
+                    <table class="table1" style="">
+                        <thead>
+                        <tr>
+                            <td></td>
+                            <td>新品名称</td>
+                            <td>新品效用</td>
+                            <td ng-repeat="attr in programmes.list[0].attrs" ng-bind="attr.p_name"></td>
+                            <td>统计时间</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in programmes.list">
+                            <td style="min-width: 20px;text-align: center;">{{$index+1}}</td>
+                            <td>新品方案{{item.prog_id}}</td>
+                            <td>{{item.prog_score| number:0}}</td>
+                            <td ng-repeat="attr in item.attrs">
+                                <span ng-repeat="v in attr.valias" ng-bind="v.name"></span>
+                            </td>
+                            <td>{{item.stat_time*1000|date:'yyyy/MM/dd'}}</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <!--<tr>-->
+                            <!--<td colspan="{{4+programmes.list[0].attrs.length}}">-->
+                                <!--<ul style="margin: 8px 5px;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="programmes.total" ng-model="programmes.pageNo" items-per-page="programmes.pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="programmesSearch()"></ul>-->
+                            <!--</td>-->
+
+                        <!--</tr>-->
+                        </tfoot>
+                    </table>
+                </panel1>
+                <panel3 title="新品竞争分析" subtitle="方案-A">
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <td></td>
+                            <td style="width:300px;">竞品名称</td>
+                            <td>品牌</td>
+                            <td>相似度</td>
+                            <td>月销售量(件)</td>
+                            <td>均价(元)</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>竞争商品-A</td>
+                            <td>华为</td>
+                            <td>90%</td>
+                            <td>378</td>
+                            <td>1,345</td>
+                        </tr>
+                        <tr class="blue">
+                            <td>2</td>
+                            <td>竞争商品-B</td>
+                            <td>华为</td>
+                            <td>90%</td>
+                            <td>378</td>
+                            <td>1,345</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>竞争商品-B</td>
+                            <td>华为</td>
+                            <td>90%</td>
+                            <td>378</td>
+                            <td>1,345</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>竞争商品-B</td>
+                            <td>华为</td>
+                            <td>90%</td>
+                            <td>378</td>
+                            <td>1,345</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </panel3>
+                <panel3 title="新品对比分析" subtitle="方案-A与竞争商品-B">
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <td></td>
+                            <td>属性名称</td>
+                            <td>优劣</td>
+                            <td style="width: 540px;"></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="blue">
+                            <td>1</td>
+                            <td>CPU核数</td>
+                            <td>相同</td>
+                            <td rowspan="4">
+                                <div id="newprodchart" style="width: 100%; height: 250px; margin: 0 auto" ng-init="chartInit()"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CPU核数</td>
+                            <td>相同</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CPU核数</td>
+                            <td>相同</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>CPU核数</td>
+                            <td>相同</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </panel3>
+            </div>
+            <div class="col-md-4">
+                <panel2 title="流行标签云">
+                    <jqcloud words="data.PopLable" height="300" auto-resize="true"></jqcloud>
+                </panel2>
+                <panel2 title="竞品评价标签">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4" style="padding: 0;">
+                                <label class="label_1 label_color_1">系统流畅(8947)</label>
+                            </div>
+                            <div class="col-md-4" style="padding: 0 5px;">
+                                <label class="label_1 label_color_1">系统流畅(8947)</label>
+                            </div>
+                            <div class="col-md-4" style="padding: 0;">
+                                <label class="label_1 label_color_1">系统流畅(8947)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4" style="padding: 0;">
+                                <label class="label_1 label_color_1">系统流畅(8947)</label>
+                            </div>
+                            <div class="col-md-4" style="padding: 0 5px;">
+                                <label class="label_1 label_color_1">系统流畅(8947)</label>
+                            </div>
+                            <div class="col-md-4" style="padding: 0;">
+                                <label class="label_1 label_color_1">系统流畅(8947)</label>
+                            </div>
+                        </div>
+                    </div>
+                </panel2>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="myModalLabel">新品方案详情</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table1">
+                        <thead>
+                        <tr>
+                            <td></td>
+                            <td>新品名称</td>
+                            <td>属性</td>
+                            <td>属性值</td>
+                            <td>统计时间</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="item in programmeAttrs.list">
+                            <td style="min-width: 30px;text-align: center;">{{$index+1}}</td>
+                            <td>新品方案{{item.prog_id}}</td>
+                            <td>{{item.p_name}}</td>
+                            <td>{{item.v_name}}</td>
+                            <td>{{item.stat_time*1000|date:'yyyy/MM/dd'}}</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <ul style="margin: 8px 5px;" previous-text="&laquo;" next-text="&raquo;" uib-pagination total-items="programmeAttrs.total" ng-model="programmeAttrs.pageNo" items-per-page="programmeAttrs.pageSize" max-size="maxSize" class="pagination" boundary-link-numbers="true" rotate="false" ng-change="programmeAttrsSearch()"></ul>
+                            </td>
+
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="myModalLabel1">设置参数</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-4 control-label">选择日期</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <input type="text" id="inputEmail3" class="form-control" uib-datepicker-popup ng-model="startTime" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10" style="text-align: right;">
+                                        <button type="submit" class="btn btn-default" ng-click="setting()" data-dismiss="modal">确定</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                   </div>
+
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
